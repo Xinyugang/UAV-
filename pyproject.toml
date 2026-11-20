@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtc-mappo"
+version = "1.0.0"
+description = "Capability-aware MAPPO with task-conditioned communication prioritization for heterogeneous UAV teams"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.8",
+    "torch>=2.0",
+    "pybullet>=3.2.5",
+    "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
